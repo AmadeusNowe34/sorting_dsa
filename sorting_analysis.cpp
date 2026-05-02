@@ -4,7 +4,7 @@
 
 int main() {
    int x[10],
-   n = 10, i, z,
+   n = 10, i, z, Total,
    temp=0,count, compare=0, swap=0, assignment=0, step=0;
    
 //Number Randomizer
@@ -68,8 +68,8 @@ int main() {
     printf("\nComparisons: "); printf(" %d\n", compare);
     printf("Swaps: "); printf(" %d\n", swap);
     printf("Assignments: "); printf(" %d\n", assignment);
-    int Total = compare + swap + assignment;
-    printf("Total Operation: "); printf(" %d\n", compare);
+    Total = compare + swap + assignment;
+    printf("Total Operation: "); printf(" %d\n", Total);
 
    
    
