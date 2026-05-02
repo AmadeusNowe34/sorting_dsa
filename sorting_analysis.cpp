@@ -9,6 +9,7 @@ int main() {
    
 //Number Randomizer
    srand(time(NULL));
+   printf("==Custom Sorting Analysis==\n\n");
    printf("Initial Array: ");
    for( z = 0; z < n; z++){
     
@@ -16,18 +17,19 @@ int main() {
 
     printf(" %d", x[z]);
    }
+   printf("\n");
 
 //Sorting
+   printf("\n[][]Sorting Progress[][]\n");
    for(i=0;i<n-1;i++){
-      compare++;
+      
        for (count=0; count<n-i-1;count++){
         
 
            if (x[count]>x[count+1]){
-            step++;
             printf("\nStep %d: Comparing %d and %d, need to rearrange..", step, x[count], x[count+1]);
-                compare++;
-                compare++;
+                
+            
 
                temp= x[count];          assignment++;
                x[count]=x[count+1];     assignment++;
@@ -43,7 +45,6 @@ int main() {
                 printf("\n");
                
            } else {
-                step++;
                 printf("\nStep %d: Comparing %d and %d, order is correct..", step, x[count], x[count+1]);
 
                 printf("\nCurrent: ");
@@ -54,18 +55,19 @@ int main() {
 
 
            }
-
+         step++;
+         compare++;
        }
    }
-   
-    printf("\n\nFinal Sorted Array: ");
+    printf("\n\n====================\n");
+    printf("Final Sorted Array: ");
            for (int i=0; i<n; i++){
                 printf(" %d", x[i]); 
            }
-
+    printf("\n\n====================\n");
     
     printf("\n\n==Operation Statistics==");
-    printf("\nComparisons: "); printf(" %d\n", compare);
+    printf("\nComparisons: "); printf(" %d\n", compare-1);
     printf("Swaps: "); printf(" %d\n", swap);
     printf("Assignments: "); printf(" %d\n", assignment);
     Total = compare + swap + assignment;
